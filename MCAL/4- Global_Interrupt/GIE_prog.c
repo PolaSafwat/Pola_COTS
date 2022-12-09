@@ -4,12 +4,15 @@
 #include "GIE_interface.h"
 #include "GIE_reg.h"
 
-void GIE_u8GlobalInterruptEnable (void)
+void GIE_voidEnableGlobal (void)
 {
-	SET_BIT(SREG,7);
+	//SET_BIT(SREG,SREG_I);
+
+	__asm __volatile ("SEI");
 }
 
-void GIE_u8GlobalInterruptDisable (void)
+void GIE_voidDisableGlobal (void)
 {
-	CLR_BIT(SREG,7);
+	//CLR_BIT(SREG,SREG_I);
+	__asm __volatile ("CLI"); /*Inline assembly */
 }
