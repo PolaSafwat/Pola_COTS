@@ -15,8 +15,7 @@ static void voidSetLCDHalfDataPort(uint8 Copy_u8Nipple);
 #define EIGHT_BIT_MODE			1u
 #define FOUR_BIT_MODE			2u
 
-#define ENABLED					1u
-#define DISABLED				2u
+
 
 
 #endif
